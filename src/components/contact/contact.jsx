@@ -61,15 +61,15 @@ function Contact(props) {
                   placeholder={t("form-email-input")}
                 />
                 <br />
-                <div className="bg-[#1773BA] mt-[40px] cursor-pointer border border-[#1773ba] hover:bg-transparent flex justify-center w-full py-[18px] group group-hover:bg-white duration-200">
-                  <button
-                    data-bs-target="#exampleModalToggle2"
-                    data-bs-toggle="modal"
-                    className=" group-hover:text-[#1773ba] text-white"
-                  >
-                    {t("form-button")}
-                  </button>
-                </div>
+                <button
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                  className=" bg-[#1773ba] text-white hover:text-[#1773ba] w-full mt-[40px] py-[18px] font-bold"
+                >
+                  {t("form-button")}
+                </button>
+
                 <div className="mt-[16px] text-[14px] leading-[20px] text-[#363636]">
                   {t("form-x")}
                   <Link to="/politics-privasy" className=" text-[#1773ba]">
@@ -80,12 +80,15 @@ function Contact(props) {
             </div>
           </div>
         </div>
+
         <div
-          className="modal fade"
-          id="exampleModalToggle2"
-          aria-hidden="true"
-          aria-labelledby="exampleModalToggleLabel2"
+          class="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
           tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
         >
           <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content">
@@ -104,11 +107,11 @@ function Contact(props) {
                   alt=""
                 />
                 <h2 className="text-center text-[28px] font-bold my-[30px] text-[#363636]">
-                  Спасибо!
+                  {t("thanks")}
                 </h2>
                 <p className=" mb-[30px] text-center">
-                  Ваши данные отправлены, <br />
-                  совсем скоро мы с вами свяжемся
+                  {t("thanks1")} <br />
+                  {t("thanks11")}
                 </p>
               </div>
               <div className="modal-footer">
@@ -118,7 +121,7 @@ function Contact(props) {
                   data-bs-dismiss="modal"
                   aria-label="Close"
                 >
-                  Close
+                  {t("close")}
                 </button>
               </div>
             </div>

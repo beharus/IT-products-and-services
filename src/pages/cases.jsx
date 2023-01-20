@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import Navbar from "../components/navbar/Navbar";
 import Contact from "../components/contact/contact";
+import { Link } from "react-router-dom";
 
 const Cases = () => {
   const { t } = useTranslation();
@@ -109,19 +110,140 @@ const Cases = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-[#1773BA] mt-[40px] cursor-pointer border border-[#1773ba] hover:bg-transparent flex justify-center w-full py-[18px] group group-hover:bg-white duration-200">
-                    <a
-                      href=""
-                      className=" group-hover:text-[#1773ba] text-white"
+                  <div className="">
+                    <button
+                data-bs-target="#exampleModalToggle3"
+                data-bs-toggle="modal"
+                      className=" bg-[#1773BA] mt-[40px] cursor-pointer border border-[#1773ba] flex justify-center w-full py-[18px] group text-white"
                     >
                       {t("case-button")}
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          
+      <div
+        className="modal fade"
+        id="exampleModalToggle3"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+              <img src={require('../img/modal1.png')} alt="" />
+            <div className=" mt-[40px] mx-auto">
+              <h1
+                className=" text-[18px] font-medium text-[#363636] mb-[35px]"
+                id="exampleModalToggleLabel"
+              >
+                {t("modal1")}
+              </h1>
+              <h2 className=" mt-[35px] text-[16px] font-normal text-center">
+                {t("contact-header1")}
+                <br /> {t("contact-header11")}
+              </h2>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body mx-[2%]">
+              <form>
+                <label htmlFor="" className=" text-[14px] leading-[16px] ">
+                  {t("form-name")}
+                </label>
+                <br />
+                <input
+                  type="text"
+                  className=" px-[19px] sm:px-[24px] my-[8px] md:my-[12px] py-[22px] text-[14px] sm:text-[16px] placeholder:text-[#5B5B5B] bg-[#F3F3F3] rounded-[4px] w-full"
+                  placeholder={t("form-name-input")}
+                />
+                <br />
+                <label htmlFor="" className=" text-[14px] leading-[16px] ">
+                  {t("form-email")}
+                </label>
+                <br />
+                <input
+                  type="text"
+                  className=" px-[19px] sm:px-[24px] my-[8px] md:my-[12px] py-[22px] text-[14px] sm:text-[16px] placeholder:text-[#5B5B5B] bg-[#F3F3F3] rounded-[4px] w-full"
+                  placeholder={t("form-email-input")}
+                />
+              </form>
+            </div>
+            <div className=" mx-[4%] mb-[40px]">
+              <button
+                className="bg-[#1773BA] mt-[40px] cursor-pointer border text-white border-[#1773ba] flex justify-center w-full py-[18px]"
+                data-bs-target="#exampleModalToggle2"
+                data-bs-toggle="modal"
+              >
+                {t("form-button")}
+              </button>
+
+              <div className="mt-[36px] text-[14px] text-center mx-[15%] leading-[20px] text-[#363636]">
+                {t("form-x")}
+                <Link to="/politics-privasy" className=" text-[#1773ba]">
+                  {t("form-l")}
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div
+        className="modal fade"
+        id="exampleModalToggle2"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="">
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">
+              <img
+                className=" w-1/3 mx-auto"
+                src={require("../img/ic_baseline-done.png")}
+                alt=""
+              />
+              <h2 className="text-center text-[28px] font-bold my-[30px] text-[#363636]">
+                {t("thanks")}
+              </h2>
+              <p className=" mb-[30px] text-center">
+                {t("thanks1")} <br />
+                {t("thanks11")}
+              </p>
+            </div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className=" mx-auto"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                {t("close")}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+
+
+
+
+
         <div className=" mt-[200px] container mx-auto">
           <div className=" text-white font-bold pb-[80px] mx-auto max-w-[1200px] text-center lg:text-start lg:pb-[21px] text-[27px] leading-[40px]">
             {t("exw-card-header2")}
@@ -212,19 +334,139 @@ const Cases = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-[#1773BA] mt-[40px] cursor-pointer border border-[#1773ba] hover:bg-transparent flex justify-center w-full py-[18px] group group-hover:bg-white duration-200">
-                    <a
-                      href=""
-                      className=" group-hover:text-[#1773ba] text-white"
+                 <div className="">
+                    <button
+                data-bs-target="#exampleModalToggle4"
+                data-bs-toggle="modal"
+                      className=" bg-[#1773BA] mt-[40px] cursor-pointer border border-[#1773ba] flex justify-center w-full py-[18px] group text-white"
                     >
-                      {t("form-button")}
-                    </a>
+                      {t("case-button")}
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
+          </div><div
+        className="modal fade"
+        id="exampleModalToggle4"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+              <img src={require('../img/modal2.png')} alt="" />
+            <div className=" mt-[40px] mx-auto">
+              <h1
+                className=" text-[18px] font-medium text-[#363636] mb-[35px]"
+                id="exampleModalToggleLabel"
+              >
+                {t("modal2")}
+              </h1>
+              <h2 className=" mt-[35px] text-[16px] font-normal text-center">
+                {t("contact-header1")}
+                <br /> {t("contact-header11")}
+              </h2>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body mx-[2%]">
+              <form>
+                <label htmlFor="" className=" text-[14px] leading-[16px] ">
+                  {t("form-name")}
+                </label>
+                <br />
+                <input
+                  type="text"
+                  className=" px-[19px] sm:px-[24px] my-[8px] md:my-[12px] py-[22px] text-[14px] sm:text-[16px] placeholder:text-[#5B5B5B] bg-[#F3F3F3] rounded-[4px] w-full"
+                  placeholder={t("form-name-input")}
+                />
+                <br />
+                <label htmlFor="" className=" text-[14px] leading-[16px] ">
+                  {t("form-email")}
+                </label>
+                <br />
+                <input
+                  type="text"
+                  className=" px-[19px] sm:px-[24px] my-[8px] md:my-[12px] py-[22px] text-[14px] sm:text-[16px] placeholder:text-[#5B5B5B] bg-[#F3F3F3] rounded-[4px] w-full"
+                  placeholder={t("form-email-input")}
+                />
+              </form>
+            </div>
+            <div className=" mx-[4%] mb-[40px]">
+              <button
+                className="bg-[#1773BA] mt-[40px] cursor-pointer border text-white border-[#1773ba] flex justify-center w-full py-[18px]"
+                data-bs-target="#exampleModalToggle2"
+                data-bs-toggle="modal"
+              >
+                {t("form-button")}
+              </button>
+
+              <div className="mt-[36px] text-[14px] text-center mx-[15%] leading-[20px] text-[#363636]">
+                {t("form-x")}
+                <Link to="/politics-privasy" className=" text-[#1773ba]">
+                  {t("form-l")}
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div
+        className="modal fade"
+        id="exampleModalToggle2"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="">
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">
+              <img
+                className=" w-1/3 mx-auto"
+                src={require("../img/ic_baseline-done.png")}
+                alt=""
+              />
+              <h2 className="text-center text-[28px] font-bold my-[30px] text-[#363636]">
+                {t("thanks")}
+              </h2>
+              <p className=" mb-[30px] text-center">
+                {t("thanks1")} <br />
+                {t("thanks11")}
+              </p>
+            </div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className=" mx-auto"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                {t("close")}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+
+
+
+
+
+
         <div className=" mt-[200px] container mx-auto">
           <div className=" text-white font-bold pb-[80px] mx-auto max-w-[1200px] text-center lg:text-start lg:pb-[21px] text-[27px] leading-[40px]">
             {t("exw-card-header3")}
@@ -348,19 +590,133 @@ const Cases = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="bg-[#1773BA] mt-[40px] cursor-pointer border border-[#1773ba] hover:bg-transparent flex justify-center w-full py-[18px] group group-hover:bg-white duration-200">
-                    <a
-                      href=""
-                      className=" group-hover:text-[#1773ba] text-white"
+                  <div className="">
+                    <button
+                data-bs-target="#exampleModalToggle5"
+                data-bs-toggle="modal"
+                      className=" bg-[#1773BA] mt-[40px] cursor-pointer border border-[#1773ba] flex justify-center w-full py-[18px] group text-white"
                     >
-                      {t("form-button")}
-                    </a>
+                      {t("case-button")}
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div><div
+        className="modal fade"
+        id="exampleModalToggle5"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+              <img src={require('../img/modal3.png')} alt="" />
+            <div className=" mt-[40px] mx-auto">
+              <h1
+                className=" text-[18px] font-medium text-[#363636] mb-[35px]"
+                id="exampleModalToggleLabel"
+              >
+                {t("modal3")}
+              </h1>
+              <h2 className=" mt-[35px] text-[16px] font-normal text-center">
+                {t("contact-header1")}
+                <br /> {t("contact-header11")}
+              </h2>
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body mx-[2%]">
+              <form>
+                <label htmlFor="" className=" text-[14px] leading-[16px] ">
+                  {t("form-name")}
+                </label>
+                <br />
+                <input
+                  type="text"
+                  className=" px-[19px] sm:px-[24px] my-[8px] md:my-[12px] py-[22px] text-[14px] sm:text-[16px] placeholder:text-[#5B5B5B] bg-[#F3F3F3] rounded-[4px] w-full"
+                  placeholder={t("form-name-input")}
+                />
+                <br />
+                <label htmlFor="" className=" text-[14px] leading-[16px] ">
+                  {t("form-email")}
+                </label>
+                <br />
+                <input
+                  type="text"
+                  className=" px-[19px] sm:px-[24px] my-[8px] md:my-[12px] py-[22px] text-[14px] sm:text-[16px] placeholder:text-[#5B5B5B] bg-[#F3F3F3] rounded-[4px] w-full"
+                  placeholder={t("form-email-input")}
+                />
+              </form>
+            </div>
+            <div className=" mx-[4%] mb-[40px]">
+              <button
+                className="bg-[#1773BA] mt-[40px] cursor-pointer border text-white border-[#1773ba] flex justify-center w-full py-[18px]"
+                data-bs-target="#exampleModalToggle2"
+                data-bs-toggle="modal"
+              >
+                {t("form-button")}
+              </button>
+
+              <div className="mt-[36px] text-[14px] text-center mx-[15%] leading-[20px] text-[#363636]">
+                {t("form-x")}
+                <Link to="/politics-privasy" className=" text-[#1773ba]">
+                  {t("form-l")}
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div
+        className="modal fade"
+        id="exampleModalToggle2"
+        aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel2"
+        tabindex="-1"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="">
+              <button
+                type="button"
+                className="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div className="modal-body">
+              <img
+                className=" w-1/3 mx-auto"
+                src={require("../img/ic_baseline-done.png")}
+                alt=""
+              />
+              <h2 className="text-center text-[28px] font-bold my-[30px] text-[#363636]">
+                {t("thanks")}
+              </h2>
+              <p className=" mb-[30px] text-center">
+                {t("thanks1")} <br />
+                {t("thanks11")}
+              </p>
+            </div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className=" mx-auto"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                {t("close")}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
       <Contact />
     </div>

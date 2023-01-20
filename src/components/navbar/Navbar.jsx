@@ -106,11 +106,11 @@ function Navbar(props) {
                   className=" text-[18px] font-medium text-[#363636] mb-[35px]"
                   id="exampleModalToggleLabel"
                 >
-                  Мы готовы ответить на ваши вопросы
+                  {t("contact-header2")}
                 </h1>
                 <h2 className=" mt-[35px] text-[16px] font-normal text-center">
-                  Оставьте контактные данные,
-                  <br /> чтобы мы могли с вами связаться
+                  {t("contact-header21")}
+                  <br /> {t("contact-header22")}
                 </h2>
                 <button
                   type="button"
@@ -150,7 +150,6 @@ function Navbar(props) {
                     className=" px-[19px] sm:px-[24px] my-[8px] md:my-[12px] py-[22px] text-[14px] sm:text-[16px] placeholder:text-[#5B5B5B] bg-[#F3F3F3] rounded-[4px] w-full"
                     placeholder={t("form-email-input")}
                   />
-                  
                 </form>
               </div>
               <div className=" mx-[4%] mb-[40px]">
@@ -159,12 +158,14 @@ function Navbar(props) {
                   data-bs-target="#exampleModalToggle2"
                   data-bs-toggle="modal"
                 >
-                    {t("form-button")}
+                  {t("form-button")}
                 </button>
-                
+
                 <div className="mt-[36px] text-[14px] text-center mx-[15%] leading-[20px] text-[#363636]">
                   {t("form-x")}
-                  <Link to="/politics-privasy" className=" text-[#1773ba]">{t("form-l")}</Link>
+                  <Link to="/politics-privasy" className=" text-[#1773ba]">
+                    {t("form-l")}
+                  </Link>
                 </div>
               </div>
             </div>
@@ -188,9 +189,18 @@ function Navbar(props) {
                 ></button>
               </div>
               <div className="modal-body">
-                <img className=" w-1/3 mx-auto" src={require('../../img/ic_baseline-done.png')} alt="" />
-                <h2 className="text-center text-[28px] font-bold my-[30px] text-[#363636]">Спасибо!</h2>
-                <p className=" mb-[30px] text-center">Ваши данные отправлены, <br/>совсем скоро мы с вами свяжемся</p>
+                <img
+                  className=" w-1/3 mx-auto"
+                  src={require("../../img/ic_baseline-done.png")}
+                  alt=""
+                />
+                <h2 className="text-center text-[28px] font-bold my-[30px] text-[#363636]">
+                  {t("thanks")}
+                </h2>
+                <p className=" mb-[30px] text-center">
+                  {t("thanks1")} <br />
+                  {t("thanks11")}
+                </p>
               </div>
               <div className="modal-footer">
                 <button
@@ -199,7 +209,7 @@ function Navbar(props) {
                   data-bs-dismiss="modal"
                   aria-label="Close"
                 >
-                  Close
+                  {t("close")}
                 </button>
               </div>
             </div>

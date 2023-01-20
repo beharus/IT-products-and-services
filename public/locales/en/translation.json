@@ -105,5 +105,17 @@
   "services28": "IT function reorganization",
   "services29": "Digital programs and solutions creation",
   "services30": "Launch and management of IT programs and projects",
-  "politics-header": "Personal Data Policy"
+  "contact-header":" We’re ready to discuss your project",
+  "contact-header1":" Leave your request for a consultation ",
+  "contact-header11":" and get an answer soon ",
+  "contact-header2":" We’re ready to answer your questions",
+  "contact-header21":" Leave your contacts so we could ",
+  "contact-header22":"get in touch with you ",
+  "thanks":"Thank you!",
+  "thanks1":"Your data has been sent, ",
+  "thanks11":"we will contact you very soon",
+  "close":"close",
+  "modal1":"Mobile Application Presentation",
+  "modal2":"Digital Conveyor presentation",
+  "modal3":"Exoskeletons presentation"
 }
