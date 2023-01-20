@@ -3,20 +3,21 @@ import "./about.css";
 import img from "../img/man.png";
 import { useTranslation } from "react-i18next";
 import Navbar from "../components/navbar/Navbar";
+import Contact from "../components/contact/contact";
+import { Link } from "react-router-dom";
 const AboutUs = () => {
   const { t } = useTranslation();
   return (
     <div>
-      <Navbar />
       <div className="header container mb-0">
         <div className="left">
           <span>{t("zagalovok")}</span>
           <br />
           <h1>{t("header")}</h1>
           <p>{t("header-descrip")}</p>
-          <a href="" className="btn">
+          <Link to="" className="btn">
             {t("header-btn")}
-          </a>
+          </Link>
         </div>
         <div className="right">
           <img src={img} alt="" />
@@ -93,9 +94,9 @@ const AboutUs = () => {
             <div className=" text-[22px] text-[#363636] font-medium leading-[29px] mt-[32px]">
               {t("exw-card-header1")}{" "}
             </div>
-            <a
+            <Link
               className=" flex text-[#1773BA] text-base leading-[22px] mt-[15px]"
-              href="!#"
+              to="/cases"
             >
               {t("exw-card-link")}{" "}
               <img
@@ -103,16 +104,16 @@ const AboutUs = () => {
                 src={require("../img/arrow-right.png")}
                 alt=""
               />
-            </a>
+            </Link>
           </div>
           <div className=" bg-white py-[50px] px-[36px] max-w-[80%] md:max-w-[48%]  lg:max-w-[32%] w-full rounded-[10px] card-item">
             <img src={require("../img/exw2.png")} alt="" />
             <div className=" text-[22px] text-[#363636] font-medium leading-[29px] mt-[32px]">
               {t("exw-card-header2")}{" "}
             </div>
-            <a
+            <Link
               className=" flex text-[#1773BA] text-base leading-[22px] mt-[15px]"
-              href="!#"
+              to="/cases"
             >
               {t("exw-card-link")}{" "}
               <img
@@ -120,16 +121,16 @@ const AboutUs = () => {
                 src={require("../img/arrow-right.png")}
                 alt=""
               />
-            </a>
+            </Link>
           </div>
           <div className=" bg-white py-[50px] px-[36px] max-w-[80%] md:max-w-[48%]  lg:max-w-[32%] w-full rounded-[10px] card-item">
             <img src={require("../img/exw3.png")} alt="" />
             <div className=" text-[22px] text-[#363636] font-medium leading-[29px] mt-[32px]">
               {t("exw-card-header3")}{" "}
             </div>
-            <a
+            <Link
               className=" flex text-[#1773BA] text-base leading-[22px] mt-[15px]"
-              href="!#"
+              to="/cases"
             >
               {t("exw-card-link")}{" "}
               <img
@@ -137,7 +138,7 @@ const AboutUs = () => {
                 src={require("../img/arrow-right.png")}
                 alt=""
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -145,7 +146,7 @@ const AboutUs = () => {
         <div className="bg-[#1773BA]">
           <div className=" max-w-[1200px] py-[150px] mx-auto container">
             <div className=" text-center text-white text-[27px] font-bold leading-[40px] mb-[80px]">
-            {t('Our-clients')}
+              {t("Our-clients")}
             </div>
             <div className=" flex justify-center flex-wrap gap-[20px]">
               <div className="">
@@ -170,78 +171,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className=" max-w-[1200px] mx-auto container py-[150px]">
-        <div className=" text-center mb-[80px] text-[27px] leading-[40px] font-bold">
-        {t('discuss')}
-        </div>
-        <div className=" text-center mb-[66px] text-[22px] leading-[29px] font-medium">
-        {t('consultation')} <br />
-          {t('consultation2')}
-        </div>
-        <div className=" gap-y-10 box-shadow items-center flex justify-between flex-wrap bg-white px-[65px] py-[65px] border-[.5px] border-[#EBEDEE]">
-          <div className=" w-full lg:w-[45%]">
-            <div className=" text-[#363636] text-[16px] leading-[22px] py-[8px]">
-            {t('phone')}
-            </div>
-            <div className=" mb-[8px] h-[0.5px] max-w-[620px] bg-[#363636] w-full"></div>
-            <div className=" text-[#363636] text-[16px] leading-[22px] py-[8px]">
-            {t('email')}
-            </div>
-            <div className=" mb-[8px] h-[0.5px] max-w-[620px] bg-[#363636] w-full"></div>
-            <div className=" text-[#363636] text-[16px] leading-[22px] py-[8px]">
-            {t('address')}
-            </div>
-            <div className=" mb-[8px] h-[0.5px] max-w-[620px] bg-[#363636] w-full"></div>
-          </div>
-          <div className="lg:w-1/2 w-full">
-            <div className="">
-              <form>
-                <label htmlFor="" className=" text-[14px] leading-[16px] ">
-                {t('form-name')}
-                </label>
-                <br />
-                <input
-                  type="text"
-                  className=" px-[19px] sm:px-[24px] my-[8px] md:my-[12px] py-[22px] text-[14px] sm:text-[16px] placeholder:text-[#5B5B5B] bg-[#F3F3F3] rounded-[4px] w-full"
-                  placeholder={t('form-name-input')}
-                />
-                <br />
-                <label htmlFor="" className=" text-[14px] leading-[16px] ">
-                {t('form-number')}
-                </label>
-                <br />
-                <input
-                  type="text"
-                  className=" px-[19px] sm:px-[24px] my-[8px] md:my-[12px] py-[22px] text-[14px] sm:text-[16px] placeholder:text-[#5B5B5B] bg-[#F3F3F3] rounded-[4px] w-full"
-                  placeholder={t('form-number-input')}
-                />
-                <br />
-                <label htmlFor="" className=" text-[14px] leading-[16px] ">
-                {t('form-email')}
-                </label>
-                <br />
-                <input
-                  type="text"
-                  className=" px-[19px] sm:px-[24px] my-[8px] md:my-[12px] py-[22px] text-[14px] sm:text-[16px] placeholder:text-[#5B5B5B] bg-[#F3F3F3] rounded-[4px] w-full"
-                  placeholder={t('form-email-input')}
-                />
-                <br />
-                <div className="bg-[#1773BA] mt-[40px] cursor-pointer border border-[#1773ba] hover:bg-transparent flex justify-center w-full py-[18px] group group-hover:bg-white duration-200">
-                  <a href="" className=" group-hover:text-[#1773ba] text-white">
-                  {t('form-button')}
-                  </a>
-                </div>
-                <div className="mt-[16px] text-[14px] leading-[20px] text-[#363636]">
-                  {t('form-x')}<span className=" text-[#1773ba]">{t('form-l')}</span>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className=" text-center py-[18px] bg-[#1773ba] text-white text-[14px]">
-        {t("footer")}
-      </div>
+      <Contact/>
     </div>
   );
 };
